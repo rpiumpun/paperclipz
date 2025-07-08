@@ -10,7 +10,7 @@ function AnimatedButton({ title, onPress }: { title: string; onPress: () => void
   const [isHolding, setIsHolding] = React.useState(false);
   const [holdTimer, setHoldTimer] = React.useState<NodeJS.Timeout | null>(null);
 
-  const HOLD_DURATION = 200; // 2 seconds to activate
+  const HOLD_DURATION = 1000; // 1 second to activate
 
   const startHold = () => {
     setIsHolding(true);
