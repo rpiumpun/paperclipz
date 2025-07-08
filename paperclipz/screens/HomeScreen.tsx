@@ -108,7 +108,7 @@ function AnimatedButton({ title, onPress }: { title: string; onPress: () => void
         activeOpacity={0.8}
       >
         <Animated.View style={[styles.animatedButton, { backgroundColor }]}>
-          <Text style={styles.buttonText}>{title}</Text>
+          <Text className='text-white text-lg font-bold text-center'>{title}</Text>
           {isHolding && (
             <View style={styles.progressContainer}>
               <Animated.View 
@@ -132,7 +132,7 @@ function AnimatedButton({ title, onPress }: { title: string; onPress: () => void
 export default function HomeScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Productive Lock</Text>
+      <Text className='text-3xl font-bold mb-5'>Welcome to Productive Lock</Text>
       <AnimatedButton
         title="🚀 Go to Currency Page"
         onPress={() => navigation.navigate('Currency')}
